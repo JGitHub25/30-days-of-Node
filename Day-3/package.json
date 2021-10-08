@@ -1,0 +1,25 @@
+{
+  "name": "nodepractice",
+  "version": "1.0.0",
+  "description": "Practicing node",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "writeHere": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "practice",
+    "node",
+    "learning",
+    "smilga"
+  ],
+  "author": "Jairo Espinel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
