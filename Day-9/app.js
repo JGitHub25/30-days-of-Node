@@ -11,6 +11,6 @@ app.get("/test", (req, res) => {
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-  console.log(`____________App listening on port ${port}____________`);
-  console.log(`In ${process.env.NODE_ENV} stage.`);
+  console.log(`Server is listening on port ${port}.`);
+  console.log(`____________App in ${process.env.NODE_ENV} stage____________`);
 });
