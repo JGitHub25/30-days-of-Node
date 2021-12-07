@@ -1,19 +1,21 @@
 const FonogramaModel = require("../models/SchemaFonograma");
 const { StatusCodes } = require("http-status-codes");
 
-const getAllFono = (req, res) => {
-  res.status(StatusCodes.OK).json("All gotten.");
+const getAllFono = async (req, res) => {
+  const fonos = await FonogramaModel.find({}).sort("cod_proy");
+
+  res.status(StatusCodes.OK).json({ count: fonos.length, fonos });
 };
-const getOneFono = (req, res) => {
+const getOneFono = async (req, res) => {
   res.status(StatusCodes.OK).json("One gotten.");
 };
-const createFono = (req, res) => {
+const createFono = async (req, res) => {
   res.status(StatusCodes.OK).json("Fono create.");
 };
-const updateFono = (req, res) => {
+const updateFono = async (req, res) => {
   res.status(StatusCodes.OK).json("Fono updated.");
 };
-const deleteFono = (req, res) => {
+const deleteFono = async (req, res) => {
   res.status(StatusCodes.OK).json("Fono deleted.");
 };
 
