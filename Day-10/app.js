@@ -10,12 +10,19 @@ const connectDB = require("./db/connect");
 //APP
 const app = express();
 
+//Router
+const fonoRouter = require("./routes/fonoRoutes");
+
 //JSON
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.status(StatusCodes.OK).send("This works.");
-});
+//TEST ROUTE.
+// app.get("/", (req, res) => {
+//   res.status(StatusCodes.OK).send("This works.");
+// });
+
+//ROUTING
+app.use("/api/v1/fonogramas", fonoRouter);
 
 //error and notFound middleware.
 const errorHandlerMiddleware = require("./middleware/error-handler");
