@@ -34,6 +34,10 @@ const SchemaFonograma = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    imagen: {
+      type: String,
+      required: [true, "Por favor ingrese una imagen."],
+    },
   },
   { timestamps: true }
 );
